@@ -1,0 +1,8 @@
+D:\Development\CannibalCoder\FizzBuzz\FizzBuzzTests\obj\Debug\FizzBuzzTests.csprojResolveAssemblyReference.cache
+D:\Development\CannibalCoder\FizzBuzz\FizzBuzzTests\bin\Debug\FizzBuzzTests.dll
+D:\Development\CannibalCoder\FizzBuzz\FizzBuzzTests\bin\Debug\FizzBuzzTests.pdb
+D:\Development\CannibalCoder\FizzBuzz\FizzBuzzTests\bin\Debug\FizzBuzz.dll
+D:\Development\CannibalCoder\FizzBuzz\FizzBuzzTests\bin\Debug\nunit.framework.dll
+D:\Development\CannibalCoder\FizzBuzz\FizzBuzzTests\bin\Debug\FizzBuzz.pdb
+D:\Development\CannibalCoder\FizzBuzz\FizzBuzzTests\obj\Debug\FizzBuzzTests.dll
+D:\Development\CannibalCoder\FizzBuzz\FizzBuzzTests\obj\Debug\FizzBuzzTests.pdb

@@ -1,0 +1,5 @@
+D:\Development\CannibalCoder\FizzBuzz\FizzBuzz\obj\Debug\FizzBuzz.csprojResolveAssemblyReference.cache
+D:\Development\CannibalCoder\FizzBuzz\FizzBuzz\bin\Debug\FizzBuzz.dll
+D:\Development\CannibalCoder\FizzBuzz\FizzBuzz\bin\Debug\FizzBuzz.pdb
+D:\Development\CannibalCoder\FizzBuzz\FizzBuzz\obj\Debug\FizzBuzz.dll
+D:\Development\CannibalCoder\FizzBuzz\FizzBuzz\obj\Debug\FizzBuzz.pdb
