@@ -11,16 +11,31 @@ namespace FizzBuzzLibrary
             substitutionRules = new List<Func<int, string>>();
         }
 
-        public List<Func<int ,string>> substitutionRules { get; set; }
-        public bool includeDefaultSubs { get; set; }
+        // Encapsulate list. Good practice, although not really necessary 
+        // in this case since, since there are no current business rules around
+        // adding and removing 
+        private List<Func<int ,string>> substitutionRules { get; set; }
+        public IEnumerable<Func<int, string>> SubstitutionRules()
+        {
+            return substitutionRules;
+        }
+        public void AddSubstitutionRule(Func<int, string> rule)
+        {
+            substitutionRules.Add(rule);
+        }
+        public void RemoveSubstitutionRule(Func<int, string> rule)
+        {
+            substitutionRules.Remove(rule);
+        }
+        public bool IncludeDefaultSubs { get; set; }
         public IEnumerable<string> Execute(int beginning, int inclusiveEnd)
         {
             //TODO Better Error Handling
             if (beginning >= inclusiveEnd || beginning <= 0 || inclusiveEnd <= 0) { throw new Exception("Starting number must be less then ending number, greater than zero and must be positive"); }
             var result = new List<string>();
-            if (includeDefaultSubs)
+            if (this.IncludeDefaultSubs)
             {
-                substitutionRules.Add(this.addDefautSubstitutions());
+                AddSubstitutionRule(this.addDefautSubstitutions());
             } 
             while (beginning <= inclusiveEnd)
             {

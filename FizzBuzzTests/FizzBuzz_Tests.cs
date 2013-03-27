@@ -20,7 +20,7 @@ namespace FizzBuzzTests
         public void Setup()
         {
             var fizzBuzz = new FizzBuzz();
-            fizzBuzz.includeDefaultSubs = true;
+            fizzBuzz.IncludeDefaultSubs = true;
             this._result = fizzBuzz.Execute(5,10).ToList();
         }
 
@@ -160,8 +160,8 @@ namespace FizzBuzzTests
         public void Setup()
         {
             _SUT = new FizzBuzz();
-            _SUT.includeDefaultSubs = true;
-            _SUT.substitutionRules.Add(x=>x == 4 ? "hello":"");
+            _SUT.IncludeDefaultSubs = true;
+            _SUT.AddSubstitutionRule(x=>x == 4 ? "hello":"");
             _SUT.Execute(3, 5);
             this._result = this._SUT.Execute(3,5).ToList();
         }
@@ -191,9 +191,9 @@ namespace FizzBuzzTests
         public void Setup()
         {
             _SUT = new FizzBuzz();
-            _SUT.includeDefaultSubs = true;
-            _SUT.substitutionRules.Add(x => x == 4 ? "hello" : "");
-            _SUT.substitutionRules.Add(x => x == 4 ? "goodbye" : "");
+            _SUT.IncludeDefaultSubs = true;
+            _SUT.AddSubstitutionRule(x => x == 4 ? "hello" : "");
+            _SUT.AddSubstitutionRule(x => x == 4 ? "goodbye" : "");
             _SUT.Execute(3, 5);
             this._result = this._SUT.Execute(3, 5).ToList();
         }
@@ -216,9 +216,9 @@ namespace FizzBuzzTests
         public void Setup()
         {
             _SUT = new FizzBuzz();
-            _SUT.includeDefaultSubs = true;
-            _SUT.substitutionRules.Add(x => x == 3 ? "hello" : "");
-            _SUT.substitutionRules.Add(x => x == 3 ? "goodbye" : "");
+            _SUT.IncludeDefaultSubs = true;
+            _SUT.AddSubstitutionRule(x => x == 3 ? "hello" : "");
+            _SUT.AddSubstitutionRule(x => x == 3 ? "goodbye" : "");
             _SUT.Execute(3, 5);
             this._result = this._SUT.Execute(3, 5).ToList();
         }
@@ -240,9 +240,9 @@ namespace FizzBuzzTests
         public void Setup()
         {
             _SUT = new FizzBuzz();
-            _SUT.includeDefaultSubs = true;
-            _SUT.substitutionRules.Add(x => { throw new Exception("I hate x!!!"); });
-            _SUT.substitutionRules.Add(x => x == 3 ? "goodbye" : "");
+            _SUT.IncludeDefaultSubs = true;
+            _SUT.AddSubstitutionRule(x => { throw new Exception("I hate x!!!"); });
+            _SUT.AddSubstitutionRule(x => x == 3 ? "goodbye" : "");
             _SUT.Execute(3, 5);
             this._result = this._SUT.Execute(3, 5).ToList();
         }
