@@ -214,4 +214,28 @@ namespace FizzBuzzTests
             Assert.AreEqual("hello", _result[0]);
         }
     }
+
+    [TestFixture]
+    public class when_calling_execute_with_custom_subs_which_throws_an_error
+    {
+        private List<string> _result;
+        private FizzBuzz _SUT;
+
+        [SetUp]
+        public void Setup()
+        {
+            _SUT = new FizzBuzz();
+            _SUT.includeDefaultSubs = true;
+            _SUT.substitutionRules.Add(x => { throw new Exception("I hate x!!!"); });
+            _SUT.substitutionRules.Add(x => x == 3 ? "goodbye" : "");
+            _SUT.Execute(3, 5);
+            this._result = this._SUT.Execute(3, 5).ToList();
+        }
+
+        [Test]
+        public void should_recover_gracefully()
+        {
+            Assert.AreEqual("goodbye", _result[0]);
+        }
+    }
 }

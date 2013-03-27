@@ -27,7 +27,14 @@ namespace FizzBuzzLibrary
                 var value = string.Empty;
                 foreach (var func in substitutionRules)
                 {
-                    value = func.Invoke(beginning);
+                    try
+                    {
+                        value = func.Invoke(beginning);
+                    }
+                    catch (Exception ex)
+                    {
+                        //TODO Log Exception somehow
+                    }
                     if (!string.IsNullOrEmpty(value))
                     {
                         break;
