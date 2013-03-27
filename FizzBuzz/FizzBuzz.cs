@@ -16,7 +16,7 @@ namespace FizzBuzzLibrary
         public IEnumerable<string> Execute(int beginning, int inclusiveEnd)
         {
             //TODO Better Error Handling
-            if (beginning >= inclusiveEnd || beginning<0 ||inclusiveEnd<=0) { throw new Exception("starting number must be less then ending number and must be positive"); }
+            if (beginning >= inclusiveEnd || beginning <= 0 || inclusiveEnd <= 0) { throw new Exception("Starting number must be less then ending number, greater than zero and must be positive"); }
             var result = new List<string>();
             if (includeDefaultSubs)
             {

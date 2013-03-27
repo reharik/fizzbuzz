@@ -63,7 +63,7 @@ namespace FizzBuzzTests
             }
             catch (Exception ex)
             {
-                Assert.AreEqual("starting number must be less then ending number and must be positive", ex.Message);
+                Assert.AreEqual("Starting number must be less then ending number, greater than zero and must be positive", ex.Message);
                 return;
             }
             Assert.Fail("exception was not thrown");
@@ -78,7 +78,7 @@ namespace FizzBuzzTests
             }
             catch (Exception ex)
             {
-                Assert.AreEqual("starting number must be less then ending number and must be positive", ex.Message);
+                Assert.AreEqual("Starting number must be less then ending number, greater than zero and must be positive", ex.Message);
                 return;
             }
             Assert.Fail("exception was not thrown");
@@ -93,7 +93,7 @@ namespace FizzBuzzTests
             }
             catch (Exception ex)
             {
-                Assert.AreEqual("starting number must be less then ending number and must be positive", ex.Message);
+                Assert.AreEqual("Starting number must be less then ending number, greater than zero and must be positive", ex.Message);
                 return;
             }
             Assert.Fail("exception was not thrown");
@@ -108,7 +108,22 @@ namespace FizzBuzzTests
             }
             catch (Exception ex)
             {
-                Assert.AreEqual("starting number must be less then ending number and must be positive", ex.Message);
+                Assert.AreEqual("Starting number must be less then ending number, greater than zero and must be positive", ex.Message);
+                return;
+            }
+            Assert.Fail("exception was not thrown");
+        }
+
+        [Test]
+        public void should_throw_error_if_start_int_is_zero()
+        {
+            try
+            {
+                new FizzBuzz().Execute(0, 5).ToList();
+            }
+            catch (Exception ex)
+            {
+                Assert.AreEqual("Starting number must be less then ending number, greater than zero and must be positive", ex.Message);
                 return;
             }
             Assert.Fail("exception was not thrown");
